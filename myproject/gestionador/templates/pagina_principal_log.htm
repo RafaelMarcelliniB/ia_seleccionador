@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector IA</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <!-- Fondo Principal -->
+  <div class="background">
+    <!-- Icono de Menú para abrir la barra lateral -->
+    <div class="menu-icono" id="menu-icon">
+      <img src="{% static 'images/1904665-bar-lines-list-menu-nav-navigation-options_122515.png' %}" alt="Menú">
+    </div>
+
+    <!-- Contenedor del Icono de Perfil y Nombre en la esquina superior derecha -->
+    <div class="perfil-contenedor">
+      <span class="saludo">Hola "202211052364@udh.edu.pe"</span>
+      <div class="icono-perfil">
+        <img src="{% static 'images/profile-icon-avatar-icon-user-icon-person-icon-free-png.png' %}" alt="Icono de perfil">
+      </div>
+    </div>
+
+    <!-- Mensaje Central -->
+    <div class="mensaje-central">
+      Escanee su basura para continuar.......
+    </div>
+  </div>
+
+  <!-- Barra de Navegación Lateral -->
+  <nav class="sidebar" id="sidebar">
+    <ul class="menu-items">
+      <li>Página Principal</li>
+      <li>Estadísticas</li>
+      <li>Cambiar Contraseña</li>
+      <li><button class="cerrar-sesion">Cerrar Sesión</button></li>
+    </ul>
+  </nav>
+
+  <!-- JavaScript para controlar la barra lateral -->
+  <script>
+    // Muestra y oculta la barra lateral
+    document.getElementById("menu-icon").addEventListener("click", function() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active"); // Activa o desactiva la clase "active"
+    });
+  </script>
+</body>
+</html>

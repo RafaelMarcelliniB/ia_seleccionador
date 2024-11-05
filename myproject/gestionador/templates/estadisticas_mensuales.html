@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas Mensuales</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Carga de Chart.js -->
+</head>
+<body>
+  <!-- Fondo Principal -->
+  <div class="background">
+    <!-- Icono de Menú -->
+    <div class="menu-icono">
+      <img src="{% static 'images/1904665-bar-lines-list-menu-nav-navigation-options_122515.png' %}" alt="Menú">
+    </div>
+
+    <!-- Título de la Página -->
+    <div class="titulo">
+      Estadísticas del mes en plásticos
+    </div>
+
+    <!-- Saludo y Icono de Perfil -->
+    <div class="perfil-contenedor">
+      <span class="saludo">Hola "202211052364@udh.edu.pe"</span>
+      <div class="icono-perfil">
+        <img src="{% static 'images/profile-icon-avatar-icon-user-icon-person-icon-free-png.png' %}" alt="Icono de perfil">
+      </div>
+    </div>
+
+    <!-- Contenedor del Gráfico -->
+    <div class="chart-container">
+      <canvas id="monthlyChart"></canvas>
+    </div>
+  </div>
+
+  <!-- JavaScript para el Gráfico -->
+  <script>
+    // Datos iniciales del gráfico
+    const data = {
+      labels: ['E', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+      datasets: [{
+        label: 'Plástico recolectado (kg)',
+        data: [12, 19, 10, 15, 22, 25, 18, 24, 20, 30, 26, 28],
+        backgroundColor: 'rgba(0, 128, 0, 0.7)',
+        borderRadius: 5,
+        barPercentage: 0.8
+      }]
+    };
+
+    // Configuración del gráfico
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: 'white',
+              font: {
+                size: 14
+              }
+            }
+          },
+          x: {
+            ticks: {
+              color: 'white',
+              font: {
+                size: 14
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: true
+          }
+        }
+      }
+    };
+
+    // Renderiza el gráfico en el elemento canvas
+    const ctx = document.getElementById('monthlyChart').getContext('2d');
+    const monthlyChart = new Chart(ctx, config);
+
+    // Función para actualizar el gráfico con nuevos datos
+    function updateChart(newData) {
+      monthlyChart.data.datasets[0].data = newData;
+      monthlyChart.update();
+    }
+  </script>
+</body>  
+</html>

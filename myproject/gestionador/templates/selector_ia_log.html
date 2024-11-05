@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector IA</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <!-- Barra de Navegación Lateral -->
+  <nav class="sidebar" id="sidebar">
+    <ul class="menu-items">
+      <li>Página Principal</li>
+      <li>Estadísticas</li>
+      <li>Cambiar Contraseña</li>
+      <li><button class="cerrar-sesion">Cerrar Sesión</button></li>
+    </ul>
+  </nav>
+
+  <!-- Fondo Principal -->
+  <div class="background">
+    <!-- Icono de Menú para abrir la barra lateral -->
+    <div class="menu-icono" id="menu-icon">
+      <img src="{% static 'images/1904665-bar-lines-list-menu-nav-navigation-options_122515.png' %}" alt="Menú">
+    </div>
+
+    <!-- Icono de Perfil y Saludo -->
+    <div class="perfil-contenedor">
+      <span class="saludo">Hola "202211052364@udh.edu.pe"</span>
+      <div class="icono-perfil">
+        <img src="{% static 'images/profile-icon-avatar-icon-user-icon-person-icon-free-png.png' %}" alt="Icono de perfil">
+      </div>
+    </div>
+
+    <!-- Contenedor principal de contenido -->
+    <div class="contenido">
+      <!-- Imagen de basura con fondo circular -->
+      <div class="imagen-basura">
+        <img src="{% static 'images/imagen-de-basura.png' %}" alt="Imagen de basura">
+      </div>
+
+      <!-- Texto de plástico detectado -->
+      <div class="texto-detectado">
+        <h2>PLÁSTICO DETECTADO</h2>
+        <p>¿Sabías que aproximadamente el 91% del plástico no se recicla? Esto significa que la mayoría del plástico que usamos acaba en vertederos o en el océano, tardando cientos de años en descomponerse.</p>
+      </div>
+
+      <!-- Texto de plástico almacenado -->
+      <div class="texto-almacenado">
+        <h2>PLÁSTICO ALMACENADO</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript para controlar la barra lateral -->
+  <script>
+    // Control de la visibilidad de la barra lateral
+    document.getElementById("menu-icon").addEventListener("click", function() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active"); // Activa o desactiva la clase "active"
+    });
+  </script>
+</body>
+</html>

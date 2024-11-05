@@ -1,0 +1,379 @@
+/* Estilos Globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo Principal */
+.background {
+  background-image: url("{% static 'images/489f337c-d6c7-4d17-8aa4-96d60425d226.png' %}"); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Icono de Menú para abrir la barra lateral */
+.menu-icono {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+}
+
+.menu-icono img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Contenedor del Saludo y Icono de Perfil en la Esquina Superior Derecha */
+.perfil-contenedor {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el saludo y el icono de perfil */
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.saludo {
+  color: black;
+  font-size: 1em;
+}
+
+/* Icono de Perfil */
+.icono-perfil img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Mensaje Central */
+.mensaje-central {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Barra de Navegación Lateral */
+.sidebar {
+  background-image: url('0ae98439-f91c-4799-8b78-9e0189874805.png'); /* Imagen de fondo de la barra lateral */
+  background-size: cover;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculta la barra fuera de la vista */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.3s ease; /* Transición suave para mostrar/ocultar */
+}
+
+.sidebar.active {
+  left: 0; /* Mueve la barra a la vista */
+}
+
+.menu-items {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.menu-items li {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cerrar-sesion {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Estilos Globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo Principal */
+.background {
+  background-image: url('489f337c-d6c7-4d17-8aa4-96d60425d226.png'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Icono de Perfil en la esquina superior derecha */
+.icono-perfil {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.icono-perfil img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Contenedor principal de contenido */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Imagen de Basura con Fondo Circular */
+.imagen-basura {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-basura img {
+  width: 150px;
+  height: auto;
+}
+
+/* Texto de Plástico Detectado */
+.texto-detectado, .texto-almacenado {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.texto-detectado h2, .texto-almacenado h2 {
+  font-size: 1.2em;
+  color: #aad4ff;
+  margin-bottom: 10px;
+}
+
+.texto-detectado p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.texto-almacenado {
+  text-align: center;
+}
+/* Contenedor de Inicio de Sesión */
+.login-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Imagen de Perfil Circular */
+.profile-icon {
+  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Formulario de Inicio de Sesión */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  font-size: 0.9em;
+  color: #333;
+  text-align: left;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #555;
+}
+
+/* Links de Ayuda */
+.help-links {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.help-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.help-links a:hover {
+  text-decoration: underline;
+}
+/* Botón de Regreso */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Contenedor de Registro */
+.register-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen de Perfil Circular */
+.profile-icon {
+  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Formulario de Registro */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.register-form label {
+  font-size: 0.9em;
+  color: #333;
+  text-align: left;
+}
+
+.register-form input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form button {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #555;
+}
+
+/* Links de Ayuda */
+.help-links {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.help-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.help-links a:hover {
+  text-decoration: underline;
+}
+.chart-container {
+  width: 90%;
+  height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

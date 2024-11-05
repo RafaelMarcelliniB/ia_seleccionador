@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector IA</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <!-- Fondo Principal -->
+  <div class="background">
+    <!-- Icono de Perfil -->
+    <div class="icono-perfil">
+      <img src="{% static 'images/profile-icon-avatar-icon-user-icon-person-icon-free-png.png' %}" alt="Icono de perfil">
+    </div>
+    <!-- Mensaje Central -->
+    <div class="mensaje-central">
+      Escanee su basura para continuar.......
+    </div>
+  </div>
+
+  <!-- Barra de Navegación Lateral -->
+  <nav class="sidebar">
+    <div class="menu-icono">
+      <img src="{% static 'images/1904665-bar-lines-list-menu-nav-navigation-options_122515.png' %}" alt="Menú">
+    </div>
+    <ul class="menu-items">
+      <li>Página Principal</li>
+      <li>Estadísticas</li>
+      <li>Cambiar Contraseña</li>
+      <li><button class="cerrar-sesion">Cerrar Sesión</button></li>
+    </ul>
+  </nav>
+</body>
+</html>
